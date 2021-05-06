@@ -6,20 +6,24 @@ class Gomerge < Formula
   desc "Gomerge is a tool to quickly merge several pull requests from your terminal. The intention of this tool is to simplfy, and eventually automate the merging of github pull requests. This tool should be able to run on most systems.
 "
   homepage "https://github.com/Cian911/gomerge"
-  version "1.1.1"
+  version "1.2.0"
   bottle :unneeded
 
-  if OS.mac?
-    url "https://github.com/Cian911/gomerge/releases/download/1.1.1/gomerge_1.1.1_Darwin_x86_64.tar.gz"
-    sha256 "df585848c512aa3b0c127c11b707f37d792a11918f018253889d4c0f6be6caba"
+  if OS.mac? && Hardware::CPU.intel?
+    url "https://github.com/Cian911/gomerge/releases/download/1.2.0/gomerge_1.2.0_Darwin_x86_64.tar.gz"
+    sha256 "b87c869f092c1fa945762ea1d76f6ab4a900697911759ba54716711e4512a072"
+  end
+  if OS.mac? && Hardware::CPU.arm?
+    url "https://github.com/Cian911/gomerge/releases/download/1.2.0/gomerge_1.2.0_Darwin_arm64.tar.gz"
+    sha256 "f2368544af5e2a7a215f8242710e24c1b65f55b1e6c89cc4ee93b1c8bb9ffe90"
   end
   if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/Cian911/gomerge/releases/download/1.1.1/gomerge_1.1.1_Linux_x86_64.tar.gz"
-    sha256 "20fdbf633b6f295b40bb0dd247189cd14eb6e113ce88cad32a6e088421f0c76f"
+    url "https://github.com/Cian911/gomerge/releases/download/1.2.0/gomerge_1.2.0_Linux_x86_64.tar.gz"
+    sha256 "629818d57e115a0276a659d85a9caddaad97172a04097b9527a2e3721cc7c823"
   end
   if OS.linux? && Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-    url "https://github.com/Cian911/gomerge/releases/download/1.1.1/gomerge_1.1.1_Linux_arm64.tar.gz"
-    sha256 "62d90d41959397114350bd31dca0f9248569820de7e78187a509ffbcc3e4c3ec"
+    url "https://github.com/Cian911/gomerge/releases/download/1.2.0/gomerge_1.2.0_Linux_arm64.tar.gz"
+    sha256 "fbf37f553047e6e1462111f1cd53c7ce4293f886b83dbf651940c129086f0775"
   end
 
   def install

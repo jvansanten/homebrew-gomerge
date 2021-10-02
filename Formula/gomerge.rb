@@ -6,28 +6,28 @@ class Gomerge < Formula
   desc "Gomerge is a tool to quickly merge several pull requests from your terminal. The intention of this tool is to simplfy, and eventually automate the merging of github pull requests. This tool should be able to run on most systems.
 "
   homepage "https://github.com/Cian911/gomerge"
-  version "2.0.0"
+  version "2.1.0"
   bottle :unneeded
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/Cian911/gomerge/releases/download/2.0.0/gomerge_2.0.0_Darwin_x86_64.tar.gz"
-      sha256 "03c1e53f156a74915c565076f53b8c0f9fba9eb42f8f3a2bfffcde950b78255c"
+      url "https://github.com/Cian911/gomerge/releases/download/2.1.0/gomerge_2.1.0_Darwin_x86_64.tar.gz"
+      sha256 "71b4d65103a87b2c37fec24d3df7dd7ce7f8622f43a48f2f13001eae496c8def"
     end
     if Hardware::CPU.arm?
-      url "https://github.com/Cian911/gomerge/releases/download/2.0.0/gomerge_2.0.0_Darwin_arm64.tar.gz"
-      sha256 "06ead4d02963d8833fb0f121b3f76d835db435ff768a0783f68fe3441d8c80fe"
+      url "https://github.com/Cian911/gomerge/releases/download/2.1.0/gomerge_2.1.0_Darwin_arm64.tar.gz"
+      sha256 "8dd1a374f9b02ad960acdc23602120e14e697968898110ad24a927db1172b3b2"
     end
   end
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/Cian911/gomerge/releases/download/2.0.0/gomerge_2.0.0_Linux_x86_64.tar.gz"
-      sha256 "210f174dce89c148a1f9722b2d012dc9e049818436804754222b9be580b91472"
+      url "https://github.com/Cian911/gomerge/releases/download/2.1.0/gomerge_2.1.0_Linux_x86_64.tar.gz"
+      sha256 "967b55a5fc1aef5255dc728ab0a2f7f2081658e2fa61c3eed4428413542378b9"
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/Cian911/gomerge/releases/download/2.0.0/gomerge_2.0.0_Linux_arm64.tar.gz"
-      sha256 "5f4612d0bea7f4ceaa507108fa618b8c058376f857e053d372978fcb15c4ef4a"
+      url "https://github.com/Cian911/gomerge/releases/download/2.1.0/gomerge_2.1.0_Linux_arm64.tar.gz"
+      sha256 "dac16f367377bd2272ea8d34e4f5739ca52ff23bfdc2b37f88ca3f5e52297004"
     end
   end
 

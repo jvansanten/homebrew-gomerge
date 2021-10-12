@@ -6,28 +6,28 @@ class Gomerge < Formula
   desc "Gomerge is a tool to quickly merge several pull requests from your terminal. The intention of this tool is to simplfy, and eventually automate the merging of github pull requests. This tool should be able to run on most systems.
 "
   homepage "https://github.com/Cian911/gomerge"
-  version "2.1.0"
+  version "2.1.1"
   bottle :unneeded
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/Cian911/gomerge/releases/download/2.1.0/gomerge_2.1.0_Darwin_x86_64.tar.gz"
-      sha256 "71b4d65103a87b2c37fec24d3df7dd7ce7f8622f43a48f2f13001eae496c8def"
-    end
     if Hardware::CPU.arm?
-      url "https://github.com/Cian911/gomerge/releases/download/2.1.0/gomerge_2.1.0_Darwin_arm64.tar.gz"
-      sha256 "8dd1a374f9b02ad960acdc23602120e14e697968898110ad24a927db1172b3b2"
+      url "https://github.com/Cian911/gomerge/releases/download/2.1.1/gomerge_2.1.1_Darwin_arm64.tar.gz"
+      sha256 "30e65258a8587ca341ef76a5560eeef8313e8ed3fed47523155aeb2afc411dad"
+    end
+    if Hardware::CPU.intel?
+      url "https://github.com/Cian911/gomerge/releases/download/2.1.1/gomerge_2.1.1_Darwin_x86_64.tar.gz"
+      sha256 "58e83050477d3843ced9a7d834ce470eecfab7d8be86d75fe770b33a82447a0f"
     end
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/Cian911/gomerge/releases/download/2.1.0/gomerge_2.1.0_Linux_x86_64.tar.gz"
-      sha256 "967b55a5fc1aef5255dc728ab0a2f7f2081658e2fa61c3eed4428413542378b9"
-    end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/Cian911/gomerge/releases/download/2.1.0/gomerge_2.1.0_Linux_arm64.tar.gz"
-      sha256 "dac16f367377bd2272ea8d34e4f5739ca52ff23bfdc2b37f88ca3f5e52297004"
+      url "https://github.com/Cian911/gomerge/releases/download/2.1.1/gomerge_2.1.1_Linux_arm64.tar.gz"
+      sha256 "180f6bd8de3c6484e704806cf96a291c74b7a680d13217e7d8bdb756872a28e6"
+    end
+    if Hardware::CPU.intel?
+      url "https://github.com/Cian911/gomerge/releases/download/2.1.1/gomerge_2.1.1_Linux_x86_64.tar.gz"
+      sha256 "86feb66ff2568ed813ead56ab33b7235061998781f7d9635b71410da9f513e7f"
     end
   end
 

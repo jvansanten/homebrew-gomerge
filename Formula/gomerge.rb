@@ -6,28 +6,28 @@ class Gomerge < Formula
   desc "Gomerge is a tool to quickly merge several pull requests from your terminal. The intention of this tool is to simplfy, and eventually automate the merging of github pull requests. This tool should be able to run on most systems.
 "
   homepage "https://github.com/Cian911/gomerge"
-  version "2.1.1"
+  version "2.2.0"
   bottle :unneeded
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/Cian911/gomerge/releases/download/2.1.1/gomerge_2.1.1_Darwin_arm64.tar.gz"
-      sha256 "30e65258a8587ca341ef76a5560eeef8313e8ed3fed47523155aeb2afc411dad"
+      url "https://github.com/Cian911/gomerge/releases/download/2.2.0/gomerge_2.2.0_Darwin_arm64.tar.gz"
+      sha256 "4a465b49a92bb67872fbeee869dd4d8eec81121251c6c9d42262c6a5ee748168"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/Cian911/gomerge/releases/download/2.1.1/gomerge_2.1.1_Darwin_x86_64.tar.gz"
-      sha256 "58e83050477d3843ced9a7d834ce470eecfab7d8be86d75fe770b33a82447a0f"
+      url "https://github.com/Cian911/gomerge/releases/download/2.2.0/gomerge_2.2.0_Darwin_x86_64.tar.gz"
+      sha256 "0c945bb68260b3801191d815a41e9e47c09bc9f4bec7f69303f5fc89a423ea41"
     end
   end
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/Cian911/gomerge/releases/download/2.1.1/gomerge_2.1.1_Linux_arm64.tar.gz"
-      sha256 "180f6bd8de3c6484e704806cf96a291c74b7a680d13217e7d8bdb756872a28e6"
+      url "https://github.com/Cian911/gomerge/releases/download/2.2.0/gomerge_2.2.0_Linux_arm64.tar.gz"
+      sha256 "2a7df76d5a4b1810a3022ce365d163bb345e3863874ef892f1b09be494d5218b"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/Cian911/gomerge/releases/download/2.1.1/gomerge_2.1.1_Linux_x86_64.tar.gz"
-      sha256 "86feb66ff2568ed813ead56ab33b7235061998781f7d9635b71410da9f513e7f"
+      url "https://github.com/Cian911/gomerge/releases/download/2.2.0/gomerge_2.2.0_Linux_x86_64.tar.gz"
+      sha256 "48b547a97778b24fb07d5f7b965439eae3e6e63e88b6aaa27d75ff2230fe15a3"
     end
   end
 

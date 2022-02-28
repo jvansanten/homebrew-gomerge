@@ -7,7 +7,6 @@ class Gomerge < Formula
 "
   homepage "https://github.com/Cian911/gomerge"
   version "2.2.0"
-  bottle :unneeded
 
   on_macos do
     if Hardware::CPU.arm?
